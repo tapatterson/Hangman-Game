@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<title>Hangman Game</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link type="text/css" href="assets/javascript/game.js">
+ 
+</head>
+
+<body>
+	<div id="game">
+		<h1>HANGMAN GAME- FLOWERS</h1>
+		<br>
+		<br>
+		<br>
+			<p id= key>Press any key to get started!</p>
+		<br>
+		<br>
+		<br>
+			<p>WINS:</p>
+		<br>
+		<br>
+		<br>
+			<p>CURRENT WORD:</p>
+		<br>
+		<br>
+		<br>
+			<p>NUMBER OF GUESSES REMAINING:</p>
+		<br>
+		<br>
+		<br>
+		<br>
+			<p>LETTERS ALREADY GUESSED:</p>
+	</div>
+
+	<script type= "text/javascript">
+
+	var $= function(id){
+			return document.getElementById(id);
+		}
+		// Create an array to hold the potential word choices. Then generate a random number to pick a word from the array. List all variables here (in a global scope) to be used throughout the game.
+		var game= ["lily","tulip","rose","daisy"];
+		var choice= Math.floor(Math.random()*4);
+		var answer= game[choice];
+		var myLength= answer.length;
+		var letters= answer.split("");
+		var attemptsLeft= 12;
+		var output= "";
+		var userLetter="";
+		var display= "";
+//Create a function to determine how many letters need to be guessed to win the game. Set the number of guesses allowed, and display "_" for the number of letters.
+		alert(answer);
+
+		document.onkeyup = function(event){
+			var userGuess = event.key;
+		}
+		var setup= function(){
+			for (var i = 0; i<answer.length;i++);{
+				display[i]= "_ ";
+				output = output + display[i];
+			}
+		
+		document.getElementById("game").innerHTML = 
+			output;
+			output = " ";
+		}
+
+		//window.onload= function(){
+		//	setup();
+		//}
+
+		var submit= function(){
+			output= " ";
+			userLetter= $("letter").value;
+			$("letter").value = " ";
+
+			for (var j=0; j<answer.length;j++){
+				alert(letters[j]);
+				if (userLetter.toLowerCase()==letters[j]){
+					display[j]= userLetter.toLowerCase();
+					win--;
+				}
+				output=output + display[j] + " ";
+			}
+			document.getElementById("game").innerHTML= output;
+		}
+
+		output= " ";
+		//attemptsLeft= --;
+
+		//document.querySelector("#game").innerHTML = html;
+	</script>
+
+
+
+	<!-- // Creates an array that list out the words to be guessed.
+// 		var randomFlowersArr = ["lily", "tulip", "rose", "daisy"];
+
+// 	//Chooses random word from the array above.
+// 		var randomWord = randomFlowersArr[Math.floor(Math.random() * randomFlowersArr.length)];
+
+// 	// Empty globals
+// 		var j;
+// 		var count= 0;
+
+// 	// Creating variables to hold the number of wins. They start at 0.
+
+//     var wins = 0;
+    
+//     // Empty array to store the guesses
+//     var answerArray = [];
+    
+//     //This function is run whenever the user presses a key.
+//     //Fill the answer array with underscores. On key, when user presses button starts loop and letters placed. 
+    
+//     document.onkeyup = function(event) {
+//  			for (var i=0; i<randomWord.length; i++){
+//  				answerArray[i] = "_";
+//  			}   
+
+//  	var html =
+//           "<p>You chose: " + userGuess + "</p>" +
+//           "<p>The computer chose: " + computerGuess + "</p>" +
+//           "<p>wins: " + wins + "</p>" +
+//           "<p>losses: " + losses + "</p>" +
+//           "<p>ties: " + ties + "</p>";
+
+
+//  		//Put them in a string.
+
+//  			j = answerArray.join(" ");
+//  				document.querySelector("#game").innerHTML = html;; 
+
+    
+    
+// }
+
+// 	// Determines which key was pressed.
+
+// 		 //var userGuess = event.key;
+
+// // Randomly chooses a flower from the options array to display as the chosen hangman word. This is the Computer's guess.
+     // var computerGuess = flowers[Math.floor(Math.random() * flowers.length)];
+
+     // console.log(computerGuess);
+		
+
+	// Creating a variable to hold our new HTML. Our HTML now keeps track of the user guesses and wins.
+
+//         var html =
+//           "<p> You chose: " + userGuess + "</p>" +
+//           "<p>wins: " + wins + "</p>" +
+          
+
+//         // Set the inner HTML contents of the #game div to our html string
+//         document.querySelector("#game").innerHTML = html;
+//       }
+
+		
+// </script>
+ </body> 
+ </html> -->

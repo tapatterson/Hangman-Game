@@ -1,10 +1,17 @@
-//Javascript Document
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hangman</title>
+</head>
+<body>
+	<div id="game">
+	<h1>Hangman!!!</h1>
 
-var $= function(id){
+	<script type="text/javascript">
+		var $= function(id){
 			return document.getElementById(id);
 		}
 		// Create an array to hold the potential word choices. Then generate a random number to pick a word from the array. List all variables here (in a global scope) to be used throughout the game.
-		
 		var game= ["lily","tulip","rose","daisy"];
 		var choice= Math.floor(Math.random()*4);
 		var answer= game[choice];
@@ -13,12 +20,10 @@ var $= function(id){
 		var attemptsLeft= 12;
 		var output= "";
 		var userLetter="";
-
+		var display= "";
 //Create a function to determine how many letters need to be guessed to win the game. Set the number of guesses allowed, and display "_" for the number of letters.
 
-		document.onkeyup = function(event){
-		 	var userGuess = event.key;
-		}
+	
 		var setup= function(){
 			for (var i = 0; i<answer.length;i++);{
 				display[i]= "_ ";
@@ -27,7 +32,7 @@ var $= function(id){
 		
 		document.getElementById("game").innerHTML = 
 			output;
-			output = "";
+			output = " ";
 		}
 
 		window.onload= function(){
@@ -43,7 +48,7 @@ var $= function(id){
 				alert(letters[j]);
 				if (userLetter.toLowerCase()==letters[j]){
 					display[j]= userLetter.toLowerCase();
-					win--;
+					win= --;
 				}
 				output=output + display[j] + " ";
 			}
@@ -52,3 +57,9 @@ var $= function(id){
 
 		output= " ";
 		attemptsLeft= --;
+
+		document.querySelector("#game").innerHTML = html;
+	</script>
+
+</body>
+</html>

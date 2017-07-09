@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<title>Hangman with Flowers</title>
+</head>
+
+<body>
+	<div id=game>
+	<h1> Hangman with Flowers!</h1>
+
+	<script type="text/javascript">
+	
+	//Creates an array with the word choices.
+		var randomWordArr = ["lily", "tulip", "rose", "daisy"];
+
+	//Chooses random word from array above.
+		var randomWord = randomWordArr[Math.floor(Math.random() * randomWordArr.length)];
+
+	//Some globals that will need to use for counter.
+		var s;
+		var count = 0;
+
+	//This is an empty array that will be used to store the guesses.
+		var answerArray = [];
+
+	//This function is run whenver the user presses a key.
+		console.log(document.onkeyup = function(event) {
+
+	//This determines which key was pressed.
+			var userGuess = event.key;
+
+	//This for loop is used to fill the answer array with underscores.
+			for (var i=0; i<randomWord.length; i++){
+				answerArray[i] = "__";
+				
+	// Then the answer will be put in a string.
+	// 		s= answerArray.join(" ");
+	// 		document.getElementById("answer").innerHTML= s;
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>
