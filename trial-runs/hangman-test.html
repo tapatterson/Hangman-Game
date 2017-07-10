@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<title>Hangman with Flowers</title>
+</head>
+
+<body>
+	<div id=game>
+	<h1> Hangman with Flowers!</h1>
+
+	<script type="text/javascript">
+	
+	//Creates an array with the word choices.
+		var randomWordArr = ["lily", "tulip", "rose", "daisy"];
+
+	//Chooses random word from array above.
+		var randomWord = randomWordArr[Math.floor(Math.random() * randomWordArr.length)];
+
+	//Some globals that will need to use for counter.
+		var s;
+		var count = 0;
+
+	//This is an empty array that will be used to store the guesses.
+		var answerArray = [];
+
+	//This function is run whenver the user presses a key.
+		console.log(document.onkeyup = function(event) {
+
+	//This determines which key was pressed.
+			var userGuess = event.key;
+
+	//This for loop is used to fill the answer array with underscores.
+			for (var i=0; i<randomWord.length; i++){
+				answerArray[i] = "__";
+				
+	// Then the answer will be put in a string.
+	// 		s= answerArray.join(" ");
+	// 		document.getElementById("answer").innerHTML= s;
+
+	<script type= "text/javascript">
+
+	var $= function(id){
+			return document.getElementById(id);
+		}
+		// Create an array to hold the potential word choices. Then generate a random number to pick a word from the array. List all variables here (in a global scope) to be used throughout the game.
+		var game= ["lily","tulip","rose","daisy"];
+		var choice= Math.floor(Math.random()*4);
+		var answer= game[choice];
+		var myLength= answer.length;
+		var letters= answer.split("");
+		var attemptsLeft= 12;
+		var output= "";
+		var userLetter="";
+		var display= "";
+//Create a function to determine how many letters need to be guessed to win the game. Set the number of guesses allowed, and display "_" for the number of letters.
+		alert(answer);
+
+		document.onkeyup = function(event){
+			var userGuess = event.key;
+		}
+		var setup= function(){
+			for (var i = 0; i<answer.length;i++);{
+				display[i]= "_ ";
+				output = output + display[i];
+			}
+		
+		document.getElementById("game").innerHTML = 
+			output;
+			output = " ";
+		}
+
+		//window.onload= function(){
+		//	setup();
+		//}
+
+		var submit= function(){
+			output= " ";
+			userLetter= $("letter").value;
+			$("letter").value = " ";
+
+			for (var j=0; j<answer.length;j++){
+				alert(letters[j]);
+				if (userLetter.toLowerCase()==letters[j]){
+					display[j]= userLetter.toLowerCase();
+					win= --;
+				}
+				output=output + display[j] + " ";
+			}
+			document.getElementById("game").innerHTML= output;
+		}
+
+		output= " ";
+		attemptsLeft= --;
+
+		document.querySelector("#game").innerHTML = html;
+	</script>
+
+
+
+	
+	</script>
+
+</body>
+</html>

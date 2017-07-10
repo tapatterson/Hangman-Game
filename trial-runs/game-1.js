@@ -86,7 +86,8 @@ document.onkeyup= function(){
 		guessesLeftDiv.innerHTML= "Guesses Left:" + guessesLeft;
 
 	var complete= true;
-//If user guesses all letters correctly while still having guesses remaining, they win the game. If not, they lose the game.
+//If user guesses all letters correctly while still having guesses remaining, they win the game. 
+//If not, they lose the game.
 	for (var i=0; i<lineSpace.length;i++){
 		if (lineSpace[i]==="_"){
 			complete= false;
